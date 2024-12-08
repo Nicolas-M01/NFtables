@@ -26,8 +26,13 @@ Ex : `nft delete table ip6 mon_filtreIPv6`
 Exemple : `nft delete chain ip filtre2 input`  
 
 ### III. Gestion des règles dans nftables
-* Créer des règles (ci-dessous, autoristaion d'entrée et sortie des ports 80 et 443 et onbandonne le reste.
+* Créer des règles (ci-dessous, autoristaion d'entrée et sortie des ports 80 et 443 et onbandonne le reste.  
 ![Capture d'écran 2024-12-08 171413](https://github.com/user-attachments/assets/33db2984-6592-4d8d-8b87-a5af031cb53e)
+
+* Lister une table ( avec -a pour avoir les "handles" qui sont des identifiants pour pouvoir supprimer après des règles ou en ajoutant entre 2.  
+
+* Supprimer une règle dans nftable  
+![Capture d'écran 2024-12-08 171629](https://github.com/user-attachments/assets/e0a8140d-3387-447b-ba22-aea244f80f7f)
 
 
 ## Résolution de l'exercice  
