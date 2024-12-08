@@ -26,3 +26,33 @@ Ex : `nft delete table ip6 mon_filtreIPv6`
 Exemple : `nft delete chain ip filtre2 input`  
 
 ### III. Gestion des règles dans nftables
+
+
+
+### Résolution de l'exercice 
+
+* mon service web est accessible en HTTP, mais aussi en HTTPS;
+* mes sites web ont besoin, pour contacter d'autres services web, d'effectuer des requêtes en HTTPS seulement (en tant que client), attention au DNS ;));
+* je gère mon service web en SSH sur le port TCP/1022;
+* mon serveur mail sera amené à questionner des serveurs NTP externes à et envoyer des mails sur des ports TCP/587;
+* je souhaite également mettre en place un peu de sécurité en comptant les paquets TCP de types NULL ou XMAS, cela dénote un comportement anormal. Nous allons également les bloquer;
+* tout ce qui n'est pas explicitement autorisé sera refusé;
+* mon serveur pourra pinguer, mais ne pas être pingué.
+
+Création de la table :  
+`nft add table ip mon_filtreIPv4`  
+
+#### Création de la chaine pour les INPUT et OUTPUT :  
+![Capture d'écran 2024-12-08 152528](https://github.com/user-attachments/assets/a74a95fd-c2b5-4f54-b1f7-27f638599b7c)
+
+#### Ajout des accessibiltés HTTP et HTTPS :  
+![Capture d'écran 2024-12-08 152621](https://github.com/user-attachments/assets/bd63a15c-a636-4de8-a8e6-fc62540ca396)
+
+#### Ouverture du port 1022  
+![Capture d'écran 2024-12-08 153123](https://github.com/user-attachments/assets/389f814d-7d2b-464c-9f66-7425c1fac238)
+![Capture d'écran 2024-12-08 153143](https://github.com/user-attachments/assets/34d83fe3-9aef-4285-9ab5-efed1b3887e6)
+
+#### Mon serveur pourra pinguer, mais ne pas être pingué
+![Capture d'écran 2024-12-08 153905](https://github.com/user-attachments/assets/10e93920-e0a8-4730-a34e-4b34d76eff7b)
+
+![Capture d'écran 2024-12-08 154024](https://github.com/user-attachments/assets/8eec3a30-ec84-41c7-98ce-91b37516274d)
