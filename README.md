@@ -44,18 +44,21 @@ Création de la table :
 `nft add table ip mon_filtreIPv4`  
 
 #### Création de la chaine pour les INPUT et OUTPUT :  
+
 ![Capture d'écran 2024-12-08 152528](https://github.com/user-attachments/assets/a74a95fd-c2b5-4f54-b1f7-27f638599b7c)
 
 #### Ajout des accessibiltés HTTP et HTTPS :  
+Le site est accessible en HTTP et HTTPS mais ne renvoie qu'en HTTPS  
 ![Capture d'écran 2024-12-08 152621](https://github.com/user-attachments/assets/8f0a1b2f-bfbb-4de0-8f7d-3d33df36ebf8)
 
 
-
 #### Ouverture du port 1022  
+On ouvre le port 1022 pour gérer ce serveur (web), donc en input.
 ![Capture d'écran 2024-12-08 153123](https://github.com/user-attachments/assets/389f814d-7d2b-464c-9f66-7425c1fac238)
 ![Capture d'écran 2024-12-08 153143](https://github.com/user-attachments/assets/34d83fe3-9aef-4285-9ab5-efed1b3887e6)
 
-#### Mon serveur pourra pinguer, mais ne pas être pingué
+#### Mon serveur pourra pinguer, mais ne pas être pingué  
+On accepte les request depuis le serveur, mais pas depuis l'extérieur. On accepte les reply de puis l'extérieur mais pas depuis l'intérieur. Donc on peut pinger mais on ne peut pas être pingé.
 ![Capture d'écran 2024-12-08 153905](https://github.com/user-attachments/assets/10e93920-e0a8-4730-a34e-4b34d76eff7b)
 ![Capture d'écran 2024-12-08 154024](https://github.com/user-attachments/assets/8eec3a30-ec84-41c7-98ce-91b37516274d)
 
@@ -76,3 +79,6 @@ A la fin on finit les chaines avec un "drop" pour rejeter tout le reste. Cette �
 ![Capture d'écran 2024-12-08 164048](https://github.com/user-attachments/assets/2e35e567-794d-4ff8-970d-29bccd7b40e0)
 
 ![Capture d'écran 2024-12-08 164056](https://github.com/user-attachments/assets/41b3b32d-25dc-4bc9-ab7a-ae7142e2ae74)
+
+ ### :white_check_mark: On devrait obtenir quelque chose comme ça (pas forcément dans le même ordre, sauf les "drop" toujours en dernier (et des handles différents ^^) :
+![Capture d'écran 2024-12-08 164817](https://github.com/user-attachments/assets/99c38b70-2ea9-4d50-a05d-d7750bd1e0a4)
