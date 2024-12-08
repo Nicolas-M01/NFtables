@@ -53,16 +53,16 @@ Le site est accessible en HTTP et HTTPS mais ne renvoie qu'en HTTPS
 
 
 #### Ouverture du port 1022  
-On ouvre le port 1022 pour gérer ce serveur (web), donc en input.
+On ouvre le port 1022 pour gérer ce serveur (web), donc en input.  
 ![Capture d'écran 2024-12-08 153123](https://github.com/user-attachments/assets/389f814d-7d2b-464c-9f66-7425c1fac238)
 ![Capture d'écran 2024-12-08 153143](https://github.com/user-attachments/assets/34d83fe3-9aef-4285-9ab5-efed1b3887e6)
 
 #### Mon serveur pourra pinguer, mais ne pas être pingué  
-On accepte les request depuis le serveur, mais pas depuis l'extérieur. On accepte les reply de puis l'extérieur mais pas depuis l'intérieur. Donc on peut pinger mais on ne peut pas être pingé.
+On accepte les request depuis le serveur, mais pas depuis l'extérieur. On accepte les reply de puis l'extérieur mais pas depuis l'intérieur. Donc on peut pinger mais on ne peut pas être pingé.  
 ![Capture d'écran 2024-12-08 153905](https://github.com/user-attachments/assets/10e93920-e0a8-4730-a34e-4b34d76eff7b)
 ![Capture d'écran 2024-12-08 154024](https://github.com/user-attachments/assets/8eec3a30-ec84-41c7-98ce-91b37516274d)
 
-#### Je souhaite également mettre en place un peu de sécurité en comptant les paquets TCP de types NULL ou XMAS, cela dénote un comportement anormal. Nous allons également les bloquer
+#### Je souhaite également mettre en place un peu de sécurité en comptant les paquets TCP de types NULL ou XMAS, cela dénote un comportement anormal. Nous allons également les bloquer  
 ![Capture d'écran 2024-12-08 161915](https://github.com/user-attachments/assets/e7b13f75-19c3-40de-823d-4896350f422f)
 ![Capture d'écran 2024-12-08 155915](https://github.com/user-attachments/assets/d33d065b-599d-47dc-86ae-426b5b8e5370)
 
@@ -73,12 +73,12 @@ Autoriser l'envoi d'e-mails via SMTP sécurisé (TCP port 587)
 ![Capture d'écran 2024-12-08 163137](https://github.com/user-attachments/assets/18120edc-869a-414d-ae37-8b6c7e5ee26b)
 
 
-#### Tout ce qui n'est pas explicitement autorisé sera refusé
+#### Tout ce qui n'est pas explicitement autorisé sera refusé  
 A la fin on finit les chaines avec un "drop" pour rejeter tout le reste. Cette étape se fait en dernier sur le `input` et `output`  
 
 ![Capture d'écran 2024-12-08 164048](https://github.com/user-attachments/assets/2e35e567-794d-4ff8-970d-29bccd7b40e0)
 
 ![Capture d'écran 2024-12-08 164056](https://github.com/user-attachments/assets/41b3b32d-25dc-4bc9-ab7a-ae7142e2ae74)
 
- ### :white_check_mark: On devrait obtenir quelque chose comme ça (pas forcément dans le même ordre, sauf les "drop" toujours en dernier (et des handles différents ^^) :
+ ### :white_check_mark: On devrait obtenir quelque chose comme ça (pas forcément dans le même ordre, sauf les "drop" toujours en dernier (et des handles différents ^^) :  
 ![Capture d'écran 2024-12-08 164817](https://github.com/user-attachments/assets/99c38b70-2ea9-4d50-a05d-d7750bd1e0a4)
