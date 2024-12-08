@@ -29,7 +29,8 @@ Exemple : `nft delete chain ip filtre2 input`
 
 
 
-### Résolution de l'exercice 
+## Résolution de l'exercice  
+---
 
 * mon service web est accessible en HTTP, mais aussi en HTTPS;
 * mes sites web ont besoin, pour contacter d'autres services web, d'effectuer des requêtes en HTTPS seulement (en tant que client), attention au DNS ;));
@@ -46,7 +47,8 @@ Création de la table :
 ![Capture d'écran 2024-12-08 152528](https://github.com/user-attachments/assets/a74a95fd-c2b5-4f54-b1f7-27f638599b7c)
 
 #### Ajout des accessibiltés HTTP et HTTPS :  
-![Capture d'écran 2024-12-08 152621](https://github.com/user-attachments/assets/5450b994-d1db-4f85-bc79-781ed69dec47)
+![Capture d'écran 2024-12-08 152621](https://github.com/user-attachments/assets/8f0a1b2f-bfbb-4de0-8f7d-3d33df36ebf8)
+
 
 
 #### Ouverture du port 1022  
@@ -61,9 +63,16 @@ Création de la table :
 ![Capture d'écran 2024-12-08 161915](https://github.com/user-attachments/assets/e7b13f75-19c3-40de-823d-4896350f422f)
 ![Capture d'écran 2024-12-08 155915](https://github.com/user-attachments/assets/d33d065b-599d-47dc-86ae-426b5b8e5370)
 
-#### Mon serveur mail sera amené à questionner des serveurs NTP externes à et envoyer des mails sur des ports TCP/587
+#### Mon serveur mail sera amené à questionner des serveurs NTP externes à et envoyer des mails sur des ports TCP/587  
+Autoriser les requêtes NTP (UDP port 123)  
+![Capture d'écran 2024-12-08 163130](https://github.com/user-attachments/assets/fa7ea739-acb9-4dc9-b604-c2fc3fdb47d5)
+Autoriser l'envoi d'e-mails via SMTP sécurisé (TCP port 587)  
+![Capture d'écran 2024-12-08 163137](https://github.com/user-attachments/assets/18120edc-869a-414d-ae37-8b6c7e5ee26b)
 
 
 #### Tout ce qui n'est pas explicitement autorisé sera refusé
-A la fn on peut finir les chaines avec un "drop" pour rejeter tout le reste  
+A la fin on finit les chaines avec un "drop" pour rejeter tout le reste. Cette étape se fait en dernier sur le `input` et `output`  
 
+![Capture d'écran 2024-12-08 164048](https://github.com/user-attachments/assets/2e35e567-794d-4ff8-970d-29bccd7b40e0)
+
+![Capture d'écran 2024-12-08 164056](https://github.com/user-attachments/assets/41b3b32d-25dc-4bc9-ab7a-ae7142e2ae74)
