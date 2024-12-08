@@ -25,3 +25,4 @@ Ex : `nft delete table ip6 mon_filtreIPv6`
 * Supprimer une chaine
 Exemple : `nft delete chain ip filtre2 input`  
 
+### III. Gestion des règles dans nftables
