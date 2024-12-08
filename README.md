@@ -22,17 +22,31 @@ Ex : `nft delete table ip6 mon_filtreIPv6`
 `nft list table ip mon_filtreIPv4`  
 ![Capture d'écran 2024-12-08 121521](https://github.com/user-attachments/assets/c78f36c7-4d9f-4fb0-aab2-9a2b434dd4ba)
 
-* Supprimer une chaine
+* Supprimer une chaine  
 Exemple : `nft delete chain ip filtre2 input`  
 
-### III. Gestion des règles dans nftables
+### III. Gestion des règles dans nftables  
 * Créer des règles (ci-dessous, autoristaion d'entrée et sortie des ports 80 et 443 et onbandonne le reste.  
 ![Capture d'écran 2024-12-08 171413](https://github.com/user-attachments/assets/33db2984-6592-4d8d-8b87-a5af031cb53e)
 
-* Lister une table ( avec -a pour avoir les "handles" qui sont des identifiants pour pouvoir supprimer après des règles ou en ajoutant entre 2.  
+* Lister une table
+Avec -a pour avoir les "handles" qui sont des identifiants pour pouvoir supprimer après des règles ou en ajoutant entre 2.  
+![Capture d'écran 2024-12-08 171716](https://github.com/user-attachments/assets/2c1d8417-e090-468e-9a49-87599fbc70fc)
+
+Si on veut insérer une ligne concernant SSH en entrée dans la chaine INPUT en dessous de la règle 5 (handle 5). Voici la ligne de commande qu'il faudra utiliser (l'insertion de la règle se fera juste après la position ciblée) :  
+![Capture d'écran 2024-12-08 172002](https://github.com/user-attachments/assets/2af8cd37-db3f-4eca-8998-0727ef884371)
+
+Pour insérer une règle avant une position donnée :  
+![Capture d'écran 2024-12-08 172225](https://github.com/user-attachments/assets/2cfee203-d58f-45b0-ae56-3a254db319d5)
+
 
 * Supprimer une règle dans nftable  
 ![Capture d'écran 2024-12-08 171629](https://github.com/user-attachments/assets/e0a8140d-3387-447b-ba22-aea244f80f7f)
+
+Ne pas oublier de d'envoyer la table dans un fichier pour la retrouver au démarrage, exemple :  
+![Capture d'écran 2024-12-08 172335](https://github.com/user-attachments/assets/74a6bf87-cb40-448c-83e4-f45f951955bd)
+
+
 
 
 ## Résolution de l'exercice  
