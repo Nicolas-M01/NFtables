@@ -46,7 +46,8 @@ Création de la table :
 ![Capture d'écran 2024-12-08 152528](https://github.com/user-attachments/assets/a74a95fd-c2b5-4f54-b1f7-27f638599b7c)
 
 #### Ajout des accessibiltés HTTP et HTTPS :  
-![Capture d'écran 2024-12-08 152621](https://github.com/user-attachments/assets/bd63a15c-a636-4de8-a8e6-fc62540ca396)
+![Capture d'écran 2024-12-08 152621](https://github.com/user-attachments/assets/5450b994-d1db-4f85-bc79-781ed69dec47)
+
 
 #### Ouverture du port 1022  
 ![Capture d'écran 2024-12-08 153123](https://github.com/user-attachments/assets/389f814d-7d2b-464c-9f66-7425c1fac238)
@@ -54,5 +55,15 @@ Création de la table :
 
 #### Mon serveur pourra pinguer, mais ne pas être pingué
 ![Capture d'écran 2024-12-08 153905](https://github.com/user-attachments/assets/10e93920-e0a8-4730-a34e-4b34d76eff7b)
-
 ![Capture d'écran 2024-12-08 154024](https://github.com/user-attachments/assets/8eec3a30-ec84-41c7-98ce-91b37516274d)
+
+#### je souhaite également mettre en place un peu de sécurité en comptant les paquets TCP de types NULL ou XMAS, cela dénote un comportement anormal. Nous allons également les bloquer
+![Capture d'écran 2024-12-08 161915](https://github.com/user-attachments/assets/e7b13f75-19c3-40de-823d-4896350f422f)
+![Capture d'écran 2024-12-08 155915](https://github.com/user-attachments/assets/d33d065b-599d-47dc-86ae-426b5b8e5370)
+
+
+
+
+#### Tout ce qui n'est pas explicitement autorisé sera refusé
+A la fn on peut finir les chaines avec un "drop" pour rejeter tout le reste  
+
