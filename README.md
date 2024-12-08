@@ -45,7 +45,7 @@ Pour insérer une règle avant une position donnée :
 
 Ne pas oublier de d'envoyer la table dans un fichier pour la retrouver au démarrage, exemple :  
 ![Capture d'écran 2024-12-08 172335](https://github.com/user-attachments/assets/74a6bf87-cb40-448c-83e4-f45f951955bd)
-
+Il ne restera plus qu'a la précharger dans la bonne interface du routeur.
 
 
 
